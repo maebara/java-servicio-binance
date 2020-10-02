@@ -7,5 +7,6 @@ public class Cryptocurrency {
     private String symbol;
     private String priceChange;
     private String priceChangePercent;
+    private String lastPrice;
     private double variation;
 }
