@@ -14,13 +14,10 @@ import java.util.List;
 import java.util.TreeSet;
 import java.util.stream.IntStream;
 
-@RunWith(SpringRunner.class)
-@SpringBootTest
+
 public class BinanceServiceTestCase {
-    @Autowired
     private BinanceService binanceService;
 
-    @Test
     public void binanceServiceCalculate() throws Exception {
         binanceService.getActualValues();
         for (int i = 0; i < 60; i++) {
@@ -51,7 +48,7 @@ public class BinanceServiceTestCase {
     }
 
 
-    @Test
+
     public void binanceServiceCalculateTimer() throws Exception {
         int timer = 10000;
         binanceService.getActualValuesTimer(TimeType.T10MIN);
