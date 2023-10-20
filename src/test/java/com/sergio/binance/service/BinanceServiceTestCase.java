@@ -15,7 +15,6 @@ import java.util.TreeSet;
 import java.util.stream.IntStream;
 
 public class BinanceServiceTestCase {
-    @Autowired
     private BinanceService binanceService;
 
     public void binanceServiceCalculate() throws Exception {
