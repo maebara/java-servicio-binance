@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>HopeCatcher</title>
+    <link href="/webjars/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/main.css" rel="stylesheet">
+    <script src="/webjars/jquery/jquery.min.js"></script>
+    <script src="/webjars/sockjs-client/sockjs.min.js"></script>
+    <script src="/webjars/stomp-websocket/stomp.min.js"></script>
+    <script src="/app.js"></script>
+</head>
+<body>
+<style>
+    body{
+        background-color: black;
+        color: #00ff41;
+        font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+        font-size: 1rem;
+        font-weight: 400;
+        line-height: normal;
+    }
+
+</style>
+<div id="main-content" class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <form class="form-inline">
+                <div class="form-group">
+                    <label for="connect">WebSocket connection:</label>
+                    <button id="connect" class="btn btn-default" type="submit">Connect</button>
+                    <button id="disconnect" class="btn btn-default" type="submit" disabled="disabled">Disconnect
+                    </button>
+                </div>
+            </form>
+        </div>
+
+    </div>
+    <div class="row">
+        <div class="col-md-3">
+            <table id="conversation-1" class="table">
+                <thead>
+                <tr>
+                    <th>Crypto</th>
+                    <th>Change 5Min%</th>
+                </tr>
+                </thead>
+                <tbody id="5Min">
+                </tbody>
+            </table>
+        </div>
+        <div class="col-md-3">
+            <table id="conversation" class="table">
+                <thead>
+                <tr>
+                    <th>Crypto</th>
+                    <th>Change 10Min%</th>
+                </tr>
+                </thead>
+                <tbody id="10Min">
+                </tbody>
+            </table>
+        </div>
+        <div class="col-md-3">
+            <table id="conversation2" class="table">
+                <thead>
+                <tr>
+                    <th>Crypto</th>
+                    <th>Change 30Min%</th>
+                </tr>
+                </thead>
+                <tbody id="30Min">
+                </tbody>
+            </table>
+        </div>
+        <div class="col-md-3">
+            <table id="conversation3" class="table">
+                <thead>
+                <tr>
+                    <th>Crypto</th>
+                    <th>Change 1hr%</th>
+                </tr>
+                </thead>
+                <tbody id="1Hr">
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-3">
+            <table id="conversation4" class="table">
+                <thead>
+                <tr>
+                    <th>Crypto</th>
+                    <th>Change 3Hr%</th>
+                </tr>
+                </thead>
+                <tbody id="3Hr">
+                </tbody>
+            </table>
+        </div>
+        <div class="col-md-3">
+            <table id="conversation5" class="table">
+                <thead>
+                <tr>
+                    <th>Crypto</th>
+                    <th>Change 5Hr%</th>
+                </tr>
+                </thead>
+                <tbody id="5Hr">
+                </tbody>
+            </table>
+        </div>
+        <div class="col-md-3">
+            <table id="conversation6" class="table">
+                <thead>
+                <tr>
+                    <th>Crypto</th>
+                    <th>Change 12Hr%</th>
+                </tr>
+                </thead>
+                <tbody id="12Hr">
+                </tbody>
+            </table>
+        </div>
+        <div class="col-md-3">
+            <table id="conversation7" class="table">
+                <thead>
+                <tr>
+                    <th>Crypto</th>
+                    <th>Change 24Hr%</th>
+                </tr>
+                </thead>
+                <tbody id="24Hr">
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <row>
+        <div class="col-md-3">
+            <img style="height: 80px" src="img/hope.png">
+        </div>
+        <div class="col-md-3">
+            <p>
+                Dev: sergio </b>
+            </p>
+            <p>
+                GitHub: <a href="https://github.com/maebara" target="_blank">/maebara</a>
+            </p>
+            <p>
+                Twitter: <a href="https://twitter.com/sergio_fer98" target="_blank">/sergio_fer98</a>
+            </p>
+        </div>
+    </row>
+</div>
+</body>
+</html>

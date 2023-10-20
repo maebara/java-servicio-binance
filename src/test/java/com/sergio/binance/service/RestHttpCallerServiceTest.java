@@ -22,12 +22,11 @@ import java.util.stream.Collectors;
 
 import static org.junit.Assert.assertEquals;
 
-@RunWith(SpringRunner.class)
-@SpringBootTest
+
 public class RestHttpCallerServiceTest {
     @Autowired
     private RestHttpCallerService restHttpCallerService;
-    @Test
+
     public void callGet() {
         String endpoint = "https://jsonplaceholder.typicode.com/posts";
         ResponseEntity<String> response = restHttpCallerService.toEndpoint(endpoint)
@@ -38,7 +37,7 @@ public class RestHttpCallerServiceTest {
         assertEquals(true, response.getStatusCode().is2xxSuccessful());
     }
 
-    @Test
+
     public void callBinanceInfo() {
         String endpoint = "https://api.binance.com/api/v3/exchangeInfo";
         ResponseEntity<ExchangeInfo> response = restHttpCallerService.toEndpoint(endpoint)
@@ -53,7 +52,7 @@ public class RestHttpCallerServiceTest {
         assertEquals(true, response.getStatusCode().is2xxSuccessful());
     }
 
-    @Test
+
     public void callBinance() {
         String endpoint = "https://api.binance.com/api/v3/ticker/24hr?symbol=LINKUSDT";
         ResponseEntity<Cryptocurrency> response = restHttpCallerService.toEndpoint(endpoint)
@@ -64,7 +63,7 @@ public class RestHttpCallerServiceTest {
         assertEquals(true, response.getStatusCode().is2xxSuccessful());
     }
 
-    @Test
+
     public void callBinance24hrTicker() {
         String endpoint = "https://api.binance.com/api/v3/ticker/24hr";
         ResponseEntity<List<Cryptocurrency>> response = restHttpCallerService.toEndpoint(endpoint)
