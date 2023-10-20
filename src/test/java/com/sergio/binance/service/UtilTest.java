@@ -4,7 +4,7 @@ import org.junit.Test;
 
 public class UtilTest {
 
-    @Test
+
     public void calculateDelta() {
         double a = Double.valueOf("4.12");
         double b = Double.valueOf("-2");

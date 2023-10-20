@@ -14,7 +14,6 @@ import java.util.List;
 import java.util.TreeSet;
 import java.util.stream.IntStream;
 
-
 public class BinanceServiceTestCase {
     private BinanceService binanceService;
 
